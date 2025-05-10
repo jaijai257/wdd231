@@ -140,6 +140,10 @@ main h1 {
   border-radius: 5px;
 }
 
+.country p{
+  text-align: center;
+}
+
 /* CERTIFICATE SECTION */
 .certificate {
   background: #195e83;
