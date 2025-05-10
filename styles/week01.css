@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background: #f0f0f0;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background: #195e83;
+  color: #fff;
+  padding: 1rem;
+  position: relative;
+}
+
+
+header img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.header-content h1 {
+  color: white;
+  font-size: 2rem;
+  flex: 1;
+}
+
+
+/* MENU BUTTON */
+#menu {
+  display: none;
+  font-size: 1.5rem;
+  border: none;
+  background: none;
+  color: #fff;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 999;
+}
+
+#menu::before {
+  content: "☰";
+}
+
+#menu.open::before {
+  content: "❎";
+}
+
+/* NAVIGATION */
+nav {
+  background: #000;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+
+.navigation a {
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  display: block;
+}
+
+.navigation a:hover {
+  background-color: #bbb;
+  color: #333;
+  font-weight: 700;
+}
+
+.navigation a.active {
+  color: #ff0;
+}
+
+.active::before {
+  content: "📍";
+}
+
+/* MAIN */
+main {
+  padding: 1rem;
+}
+
+main h1 {
+  text-align: left;
+  color: #195e83; /* Keep your existing color */
+  margin-bottom: 1rem;
+}
+
+.card-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 2rem;
+}
+
+.courseWork,
+.country {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.courseWork h2,
+.country h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.country img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* CERTIFICATE SECTION */
+.certificate {
+  background: #195e83;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 2rem 1rem 0;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.filters button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.courses button {
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cse {
+  background: #8B0000;
+  color: white;
+}
+
+.wdd {
+  background: #A0522D;
+  color: white;
+}
+
+.completed {
+  border: 2px solid gold;
+}
+
+/* FOOTER */
+footer {
+  background: #195e83;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer img {
+  width: 24px;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+  }
+
+  .courses {
+    grid-template-columns: 1fr;
+  }
+
+  .navigation {
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    width: 200px;
+    border-radius: 10px;
+    display: none;
+  }
+
+  .navigation.open {
+    display: flex;
+  }
+
+  #menu {
+    display: block;
+  }
+
+  .navigation a {
+    padding: 1rem;
+    text-align: center;
+  }
+}
