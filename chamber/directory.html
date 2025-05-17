@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Official gaming store website for Cybex. Discover top games, join the community, and level up your play."/>
+  <meta name="author" content="Jeffrey Ohaegbulem"/>
+
+  <!-- Social media data -->
+  <meta property="og:title" content="Cybex Gaming Store"/>
+  <meta property="og:description" content="Discover and shop the latest games at Cybex."/>
+  <meta property="og:image" content="images/og-image.jpg"/>
+  <meta property="og:url" content="https://yourdomain.com/cybex/index.html"/>
+
+  <link rel="stylesheet" href="styles/normalize.css"/>
+  <script src="scripts/directory.js" defer></script>
+  <title>Cybex | Your Ultimate Gaming Store</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="Cybex Logo" />
+      <div class="site-name">
+        <h1>Cybex</h1>
+        <p>Your Ultimate Gaming Store</p>
+      </div>
+    </div>
+
+    <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+    <nav id="nav">
+      <ul id="menu" class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="directory.html">Games</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+
+    <section class="hero">
+      <h2>Level Up Your Play</h2>
+      <p>Discover the latest and greatest in gaming at Cybex.</p>
+      <a href="directory.html" class="cta-button">Shop Now</a>
+    </section>
+
+    <div class="grid-list">
+      <button id="grid">⏹️ Grid</button>
+      <button id="list">📄 List</button>
+    </div>
+
+    <section class="game-directory">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        
+        <div class="product-card">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg" alt="Cyberpunk 2077" />
+          <h3>Cyberpunk 2077</h3>
+          <p>Platform: PC, PS5, Xbox</p>
+          <p>$49.99</p>
+        </div>
+        <div class="product-card">
+          <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRxFAMCihTSxdPuyGX6xfkqf4OKP2zKPa7Nj7Jb8eJSGUqjZj0Lto5PgmQPmSkQsV78P1pS" alt="God of War Ragnarok" />
+          <h3>God of War Ragnarok</h3>
+          <p>Platform: PS5</p>
+          <p>$59.99</p>
+        </div>
+        <div class="product-card">
+          <img src="https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg" alt="Elden Ring" />
+          <h3>Elden Ring</h3>
+          <p>Platform: PC, PS5, Xbox</p>
+          <p>$59.99</p>
+        </div>
+        <div class="product-card">
+          <img src="https://cdn.akamai.steamstatic.com/steam/apps/1938090/header.jpg" alt="Modern Warfare II" />
+          <h3>Call of Duty: MW II</h3>
+          <p>Platform: PC, PS5, Xbox</p>
+          <p>$69.99</p>
+        </div>
+        <div class="product-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdH1XYII-E82gDFE7yqJmzWz8Y_mEMvRU4Tg&s" alt="Need for speed: Unbound" />
+          <h3>Need for speed: Unbound</h3>
+          <p>Platform: Nintendo Switch</p>
+          <p>$59.99</p>
+        </div>
+        <div class="product-card">
+          <img src="https://assets2.razerzone.com/images/pnx.assets/89aed41d5b981473c140317e67dbc617/500x500-enki-pro.webp" alt="Gaming Chair" />
+          <h3>Razer Gaming Chair</h3>
+          <p>Ergonomic comfort for long gaming sessions</p>
+          <p>$299.99</p>
+        </div>
+        <div class="product-card">
+          <img src="https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_SL1500_.jpg" alt="Mechanical Keyboard" />
+          <h3>SteelSeries Mechanical Keyboard</h3>
+          <p>RGB Backlit, Custom Macro Keys</p>
+          <p>$129.99</p>
+        </div>
+        <div class="product-card">
+          <img src="https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_SL1500_.jpg" alt="Gaming Mouse" />
+          <h3>Logitech G502 Hero</h3>
+          <p>High Performance Wired Gaming Mouse</p>
+          <p>$49.99</p>
+        </div>
+        <div class="product-card">
+          <img src="https://hyperx.com/cdn/shop/files/hyperx_cloud_iii_wireless_black_77z45aa_main_1_1080x.jpg?v=1743201406" alt="Gaming Headset" />
+          <h3>HyperX Cloud II</h3>
+          <p>7.1 Surround Sound Gaming Headset</p>
+          <p>$99.99</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="membership">
+      <h2>Join the Cybex Community</h2>
+      <p>Sign up to receive exclusive deals, early access to new releases, and loyalty rewards!</p>
+      <form action="#" method="post">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="membership">Membership Level:</label>
+        <select id="membership" name="membership">
+          <option value="basic">Basic</option>
+          <option value="silver">Silver (₦5,000/month)</option>
+          <option value="gold">Gold (₦10,000/month)</option>
+        </select>
+
+        <button type="submit">Join Now</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <p><strong>Cybex Gaming Store</strong><br>123 Game Street, Lagos, Nigeria<br>Email: support@cybexgaming.com<br>Phone: +234 700 123 4567</p>
+      </div>
+      <div class="social">
+        <img src="images/icons8-youtube.svg" alt="YouTube">
+        <img src="images/icons8-twitter (1).svg" alt="Twitter">
+        <img src="images/icons8-linkedin.svg" alt="LinkedIn">
+      </div>
+      <div>
+        <p>WDD231 Class Project<br>Jeffrey Ohaegbulem<br>&copy; <span id="year"></span> Cybex Gaming Store<br>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
