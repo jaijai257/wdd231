@@ -12,8 +12,9 @@
     <meta property="og:url" content="https://yourdomain.com/cybex/index.html"/>
 
     <link rel="stylesheet" href="styles/normalize.css"/>
-    <link rel="stylesheet" href="styles/styles.css"/> <script src="scripts/directory.js" defer></script>
-    <script src="scripts/weather.js" defer></script> <script src="scripts/spotlights.js" defer></script> <title>Cybex | Your Ultimate Gaming Store</title>
+    <script src="scripts/directory.js" defer></script>
+
+    <title>Cybex | Your Ultimate Gaming Store</title>
 </head>
 <body>
     <header>
@@ -43,7 +44,7 @@
                 <source srcset="images/hero-larger.webp" media="(min-width: 1200px)">
                 <source srcset="images/hero-medium.webp" media="(min-width: 700px)">
             </picture>
-            <img src="images/hero-small.webp" alt="Hero Image" style="width: 100%;">
+            <img src="images/hero-small.webp.webp" alt="Hero Image" style="width: 100%;">
             <div class="hero-content">
                 <h2>Welcome to Cybex!</h2>
                 <p>Your ultimate destination for all things gaming.</p>
@@ -62,23 +63,27 @@
             </section>
 
             <section class="weather">
-                <h2>Weather in Enugu</h2>
-                <div id="weather-info">
-                    <p>Loading weather...</p>
-                </div>
-                <div id="forecast">
+                <h2>Weather <span class="weather-icon">⛅</span></h2>
+                <div class="weatherinfo">
+                    <p>Temperature: <span id="temperature">28</span>°C</p>
+                    <p>Condition: <span id="condition">Sunny</span></p>
+                    <p>Wind Speed: <span id="wind-speed">6</span> km/h</p>
+                    <p class="wind-chill">Wind Chill: </p>
                 </div>
             </section>
 
             <section class="spotlights">
                 <h2>Featured Companies</h2>
                 <select id="membership" name="membership">
-                  <option value="basic">Basic</option>
-                  <option value="silver">Silver (₦5,000/month)</option>
-                  <option value="gold">Gold (₦10,000/month)</option>
+                    <option value="basic">Basic</option>
+                    <option value="silver">Silver (₦5,000/month)</option>
+                    <option value="gold">Gold (₦10,000/month)</option>
                 </select>
+                <div class="product-grid grid"></div> 
+            </section>
         </div>
     </main>
+
     <footer>
         <div class="footer-content">
             <div>
