@@ -80,12 +80,12 @@ nav ul li a.active {
   cursor: pointer;
 }
 
-/* Main Content Styles */
+/* Main Content Style*/
 main {
   padding: 20px;
 }
 
-/* home-grid for events, weather, spotlights */
+/* Home Grid for Events, Weather, Spotlights  */
 .home-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -111,20 +111,28 @@ main {
   text-align: center;
   color: #fff;
   margin-bottom: 20px;
+  height: 400px; 
+  overflow: hidden; 
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+  background: linear-gradient(to right, #1f1f2e, #2b2b3f);
 }
 
+.hero picture,
 .hero img {
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  object-fit: cover ;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
 .hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  z-index: 2; 
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -178,7 +186,7 @@ main {
   text-decoration: underline;
 }
 
-/* Weather Section */
+/* Weather Section  */
 .weather {
   text-align: center;
 }
@@ -195,17 +203,36 @@ main {
   margin-bottom: 10px;
 }
 
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  justify-content: center;
+}
+
 .forecast-item {
   background: #2b2b3f;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
-/* Spotlights Section */
+.weather-icon, .weather-icon-small {
+  width: 50px;
+  height: auto;
+  display: block;
+  margin: 0 auto 5px auto;
+}
+
+.weather-icon-small {
+  width: 40px;
+}
+
+/* Spotlights Section*/
 .spotlight-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Stack on smaller screens, adjust later */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted for more flexibility */
   gap: 15px;
 }
 
@@ -241,7 +268,7 @@ main {
   text-decoration: underline;
 }
 
-/* Game Directory (keeping existing styles) */
+/* Game Directory  */
 .game-directory {
   padding: 2rem 1rem;
 }
@@ -265,9 +292,10 @@ main {
   margin-bottom: 1rem;
 }
 
+/* Product Grid */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 1.5rem;
 }
 
@@ -292,6 +320,7 @@ main {
   margin-bottom: 1rem;
 }
 
+/* List View for Products  */
 .product-grid.list {
   display: block;
 }
@@ -319,6 +348,7 @@ main {
   margin: 0.2rem 0;
 }
 
+/* Grid/List Toggle */
 .grid-list{
   display: flex;
   justify-content: center;
@@ -339,50 +369,233 @@ main {
   gap: 1rem;
 }
 
-/* Membership (keeping existing styles) */
-.membership {
+/* Membership Section  */
+.join-page {
   padding: 2rem 1rem;
-  background: #1a1a2a;
-  border-top: 2px solid var(--accent-color);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.membership h2 {
+.join-page h1 {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
 }
 
-.membership form {
-  max-width: 500px;
-  margin: auto;
-  display: grid;
-  gap: 1rem;
+.join-content {
+  display: flex;
+  flex-direction: column; 
+  gap: 2rem;
 }
 
-.membership label {
+/* Membership Form Styling */
+.membership-form {
+  background: var(--primary-color);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  flex: 1; 
+}
+
+.membership-form fieldset {
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.membership-form legend {
+  color: var(--accent-color);
+  font-size: 1.2rem;
   font-weight: bold;
+  padding: 0 0.5rem;
 }
 
-.membership input,
-.membership select {
-  padding: 0.5rem;
-  border: none;
+.membership-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.membership-form input[type="text"],
+.membership-form input[type="email"],
+.membership-form input[type="tel"],
+.membership-form select,
+.membership-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.4rem;
+  border: 1px solid #444;
   border-radius: 5px;
+  background-color: #2b2b3f;
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
-.membership button {
+.membership-form input:focus,
+.membership-form select:focus,
+.membership-form textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 0, 85, 0.3);
+}
+
+.membership-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.membership-form button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 1rem;
   background: var(--accent-color);
   color: white;
   border: none;
-  padding: 0.7rem;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.membership button:hover {
+.membership-form button[type="submit"]:hover {
+  background: #e6004c;
+  transform: translateY(-2px);
+}
+
+/* Membership Cards Styling */
+.membership-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  flex: 1; 
+  align-content: start; 
+}
+
+.membership-card {
+  background: #1e1e2e;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.membership-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+  
+}
+
+.membership-card h3 {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.membership-card p {
+  margin-bottom: 1.2rem;
+  flex-grow: 1; 
+}
+
+.membership-card button {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.membership-card button:hover {
   background: #e6004c;
 }
 
-/* Footer (keeping existing styles) */
+/* Modal Styling  */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%; /
+  height: 100%; 
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7); 
+  justify-content: center;
+  align-items: center; 
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: var(--primary-color);
+  margin: auto;
+  padding: 30px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px; 
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  position: relative;
+  color: var(--text-color);
+  transform: scale(0.9); 
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.modal.show .modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.modal-content h3 {
+  color: var(--accent-color);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.modal-content ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-top: 1rem;
+}
+
+.modal-content ul li {
+  margin-bottom: 0.5rem;
+}
+
+.close-button {
+  color: var(--accent-color);
+  font-size: 2.5rem;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #e6004c;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Footer (consistent across all pages) */
 footer {
   background: var(--primary-color);
   color: var(--text-color);
@@ -456,11 +669,30 @@ footer img {
   }
 
   .home-grid {
-      grid-template-columns: 1fr; /* Stack on smaller screens */
+      grid-template-columns: 1fr;
   }
 
   .spotlight-grid {
-      grid-template-columns: 1fr; /* Stack spotlights on smaller screens */
+      grid-template-columns: 1fr; 
+  }
+
+
+  .hero {
+      height: 300px;
+  }
+  .hero-content h2 {
+      font-size: 2rem;
+  }
+  .hero-content p {
+      font-size: 1rem;
+  }
+
+  .join-content {
+      flex-direction: column; 
+  }
+
+  .membership-cards {
+      grid-template-columns: 1fr; 
   }
 }
 
@@ -471,5 +703,24 @@ footer img {
 
   .spotlight-grid {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust as needed */
+  }
+
+  .join-content {
+      flex-direction: row; 
+  }
+
+  .membership-form {
+      flex: 2; 
+  }
+
+  .membership-cards {
+      flex: 1;
+      grid-template-columns: 1fr; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .membership-cards {
+      grid-template-columns: 1fr; 
   }
 }
