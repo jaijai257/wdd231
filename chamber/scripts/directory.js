@@ -26,11 +26,18 @@ listViewBtn.addEventListener('click', () => {
 
 
 // Final page setup
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('year').textContent = new Date().getFullYear();
-  document.getElementById('lastModified').textContent = document.lastModified;
-  // fetchMembers(); // This call is now handled by fetchAndDisplayProducts in directory.js
-  // displayWindChill(); // This is for weather.js, not directory.js
+document.addEventListener("DOMContentLoaded", () => {
+  // Corrected ID to "year" to match HTML <span id="year">
+  const yearElement = document.getElementById("year");
+  if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+  }
+
+  // Corrected to only insert the date, assuming "Last Modified: " is in HTML
+  const lastModifiedElement = document.getElementById("lastModified");
+  if (lastModifiedElement) {
+      lastModifiedElement.textContent = document.lastModified;
+  }
 });
 
 
