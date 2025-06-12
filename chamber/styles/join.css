@@ -1,0 +1,254 @@
+/* styles/join.css */
+
+/* General layout for the join page */
+.join-page {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.join-page h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--accent-color);
+}
+
+.join-content {
+    display: flex;
+    flex-direction: column; /* Stack on small screens */
+    gap: 2rem;
+}
+
+/* Membership Form Styling */
+.membership-form {
+    background: var(--primary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    flex: 1; /* Allows form to grow */
+}
+
+.membership-form fieldset {
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.membership-form legend {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+.membership-form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.membership-form input[type="text"],
+.membership-form input[type="email"],
+.membership-form input[type="tel"],
+.membership-form select,
+.membership-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.4rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #2b2b3f;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.membership-form input:focus,
+.membership-form select:focus,
+.membership-form textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 0, 85, 0.3);
+}
+
+.membership-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.membership-form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.membership-form button[type="submit"]:hover {
+    background: #e6004c;
+    transform: translateY(-2px);
+}
+
+/* Membership Cards Styling */
+.membership-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    flex: 1; /* Allows cards to grow */
+    align-content: start; /* Align cards to the start of the grid */
+}
+
+.membership-card {
+    background: #1e1e2e;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Initial animation properties */
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.membership-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+    /* Animation duration and delay will be set by JS */
+}
+
+
+.membership-card h3 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.membership-card p {
+    margin-bottom: 1.2rem;
+    flex-grow: 1; /* Allows paragraph to take available space */
+}
+
+.membership-card button {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.membership-card button:hover {
+    background: #e6004c;
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 20px; /* Add some padding */
+}
+
+.modal-content {
+    background-color: var(--primary-color);
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 90%; /* Responsive width */
+    max-width: 600px; /* Max width for larger screens */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    position: relative;
+    color: var(--text-color);
+    transform: scale(0.9); /* Initial state for animation */
+    opacity: 0; /* Initial state for animation */
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-content h3 {
+    color: var(--accent-color);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.modal-content ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-top: 1rem;
+}
+
+.modal-content ul li {
+    margin-bottom: 0.5rem;
+}
+
+.close-button {
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #e6004c;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Responsive Styles for join.html */
+@media (min-width: 768px) {
+    .join-content {
+        flex-direction: row; /* Side-by-side on larger screens */
+    }
+
+    .membership-form {
+        flex: 2; /* Form takes more space */
+    }
+
+    .membership-cards {
+        flex: 1; /* Cards take less space */
+        grid-template-columns: 1fr; /* Stack cards vertically on the side */
+    }
+}
+
+@media (min-width: 1024px) {
+    .membership-cards {
+        grid-template-columns: 1fr; /* Maintain single column on larger screens if desired */
+    }
+}
+
+/* Ensure consistent header/footer from styles.css */
+/* (Assuming styles.css handles header, footer, and general body styles) */

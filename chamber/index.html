@@ -3,24 +3,39 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Official gaming store website for Cybex. Discover top games, join the community, and level up your play."/>
+    <meta name="description" content="Welcome to Cybex Gaming Store, your ultimate destination for top games, community events, and exclusive member benefits. Level up your play!"/>
     <meta name="author" content="Jeffrey Ohaegbulem"/>
 
-    <meta property="og:title" content="Cybex Gaming Store"/>
-    <meta property="og:description" content="Discover and shop the latest games at Cybex."/>
+    <!-- Open Graph / Social Media Meta Tags for better sharing -->
+    <meta property="og:title" content="Cybex Gaming Store - Your Ultimate Gaming Hub"/>
+    <meta property="og:description" content="Discover the latest games, join our vibrant community, and unlock exclusive benefits at Cybex Gaming Store."/>
     <meta property="og:image" content="images/og-image.jpg"/>
     <meta property="og:url" content="https://yourdomain.com/cybex/index.html"/>
+    <meta property="og:type" content="website"/>
 
+    <!-- External CSS Links -->
     <link rel="stylesheet" href="styles/normalize.css"/>
-    <script src="scripts/directory.js" defer></script>
-    <link rel="icon" href="favicon.png" type="png">
+    <link rel="stylesheet" href="styles/join.css"/>
+    
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.png" type="image/png"> <!-- Corrected type attribute -->
+
+    <!-- External JavaScript Links -->
+    <!-- scripts.js handles general site functionalities like nav toggle and footer dates -->
+    <script src="scripts/scripts.js" defer></script>
+    <!-- weather.js fetches and displays dynamic weather data -->
+    <script src="scripts/weather.js" defer></script>
+    <!-- spotlights.js fetches and displays random company spotlights -->
+    <script src="scripts/spotlight.js" defer></script>
+    <!-- directory.js is NOT needed on the home page -->
 
     <title>Cybex | Your Ultimate Gaming Store</title>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="images/logo.png" alt="Cybex Logo" />
+            <img src="images/logo.webp" alt="Cybex Logo" />
             <div class="site-name">
                 <h1>Cybex</h1>
                 <p>Your Ultimate Gaming Store</p>
@@ -40,47 +55,60 @@
     </header>
 
     <main>
-        <section class="hero"> 
+        <section class="hero">
             <picture>
-                <source srcset="images/hero-larger.webp" media="(min-width: 1200px)">
+                <source srcset="images/hero-large.webp" media="(min-width: 1200px)">
                 <source srcset="images/hero-medium.webp" media="(min-width: 700px)">
+                <img src="images/hero-small.webp" alt="Hero Image of gamers enjoying a vibrant gaming setup">
             </picture>
-            <img src="images/hero-small.webp.webp" alt="Hero Image" style="width: 100%;">
             <div class="hero-content">
-                <h2>Welcome to Cybex!</h2>
-                <p>Your ultimate destination for all things gaming.</p>
-                <a href="join.html" class="cta-button">Join the Community</a>
+                <h2>Level Up Your Reality with Cybex!</h2>
+                <p>Dive into an immersive world of endless gaming possibilities. Discover the hottest new releases, connect with a passionate community, and unlock your true potential.</p>
+                <!-- Call to action linking to the join page -->
+                <a href="join.html" class="cta-button">Join the Community Today!</a>
             </div>
         </section>
 
+        <!-- Home Grid for organizing sections: Events, Weather, Spotlights -->
         <div class="home-grid">
             <section class="current-events">
                 <h2>Current Events</h2>
                 <div class="event">
-                    <h3>Upcoming Tournament!</h3>
-                    <p>Join our next gaming tournament on [Date]!</p>
-                    <a href="#">Learn More</a>
+                    <h3>Epic Summer Sale!</h3>
+                    <p>Grab your favorite games at incredible discounts all month long. Don't miss out!</p>
+                    <a href="directory.html">Explore Deals</a>
                 </div>
+                <div class="event">
+                    <h3>Community Tournament Sign-ups</h3>
+                    <p>Register now for our annual Valorant Championship! Prizes await!</p>
+                    <a href="join.html">Register Here</a>
+                </div>
+                
             </section>
 
             <section class="weather">
-                <h2>Weather <span class="weather-icon">⛅</span></h2>
-                <div class="weatherinfo">
-                    <p>Temperature: <span id="temperature">28</span>°C</p>
-                    <p>Condition: <span id="condition">Sunny</span></p>
+                <h2>Weather in Lagos <span class="weather-icon">⛅</span></h2>
+                <div id="weather-info"> <!-- Changed class to id to match weather.js -->
+                    <p>Temperature: <span id="temperature">29</span>°C</p>
+                    <p>Condition: <span id="condition">Heavy Thunderstorm</span></p>
                     <p>Wind Speed: <span id="wind-speed">6</span> km/h</p>
-                    <p class="wind-chill">Wind Chill: </p>
+                    <p class="wind-chill-info">Wind Chill: </p> 
+                </div>
+                <div id="forecast">
+                    <h3>3-Day Forecast</h3>
+                    <div class="forecast-grid">
+                        <p>Wednesday (2025-06-11): 30°C</p>
+                        <p>Tuesday (2025-06-10): 29°C</p>
+                        <p>Monday (2025-06-09): 29°C</p>
+                    </div>
                 </div>
             </section>
 
             <section class="spotlights">
                 <h2>Featured Companies</h2>
-                <select id="membership" name="membership">
-                    <option value="basic">Basic</option>
-                    <option value="silver">Silver (₦5,000/month)</option>
-                    <option value="gold">Gold (₦10,000/month)</option>
-                </select>
-                <div class="product-grid grid"></div> 
+                <div class="spotlight-grid">
+                    <p></p>
+                </div>
             </section>
         </div>
     </main>

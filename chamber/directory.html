@@ -1,134 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Official gaming store website for Cybex. Discover top games, join the community, and level up your play."/>
-  <meta name="author" content="Jeffrey Ohaegbulem"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Official gaming store website for Cybex. Discover top games, join the community, and level up your play."/>
+    <meta name="author" content="Jeffrey Ohaegbulem"/>
 
-  <!-- Social media data -->
-  <meta property="og:title" content="Cybex Gaming Store"/>
-  <meta property="og:description" content="Discover and shop the latest games at Cybex."/>
-  <meta property="og:image" content="images/og-image.jpg"/>
-  <meta property="og:url" content="https://yourdomain.com/cybex/index.html"/>
+    <!-- Social media data -->
+    <meta property="og:title" content="Cybex Gaming Store"/>
+    <meta property="og:description" content="Discover and shop the latest games at Cybex."/>
+    <meta property="og:image" content="images/og-image.jpg"/>
+    <meta property="og:url" content="https://yourdomain.com/cybex/index.html"/>
 
-  <link rel="stylesheet" href="styles/normalize.css"/>
-  <link rel="icon" href="favicon.png" type="png">
-  <script src="scripts/directory.js" defer></script>
-  <title>Cybex | Your Ultimate Gaming Store</title>
+    <link rel="stylesheet" href="styles/normalize.css"/>
+    <link rel="stylesheet" href="styles/styles.css"/> <!-- Link to the main stylesheet -->
+    <link rel="icon" href="favicon.png" type="image/png"> 
+    <script src="scripts/scripts.js" defer></script> <!-- Using general scripts.js for nav and footer -->
+    <script src="scripts/directory.js" defer></script> <!-- Specific script for directory page functionality -->
+    <title>Cybex | Your Ultimate Gaming Store</title>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="images/logo.png" alt="Cybex Logo" />
-      <div class="site-name">
-        <h1>Cybex</h1>
-        <p>Your Ultimate Gaming Store</p>
-      </div>
-    </div>
+    <header>
+        <div class="logo">
+            <img src="images/logo.webp" alt="Cybex Logo" />
+            <div class="site-name">
+                <h1>Cybex</h1>
+                <p>Your Ultimate Gaming Store</p>
+            </div>
+        </div>
 
-    <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+        <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
 
-    <nav id="nav">
-      <ul id="menu" class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="directory.html">Games</a></li>
-        <li><a href="join.html">Join</a></li>
-        <li><a href="discover.html">Discover</a></li>
-      </ul>
-    </nav>
-  </header>
+        <nav id="nav">
+            <ul id="menu" class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html" class="active">Games</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-
-
-    <section class="hero">
-      <h2>Level Up Your Play</h2>
-      <p>Discover the latest and greatest in gaming at Cybex.</p>
-      <a href="directory.html" class="cta-button">Shop Now</a>
-    </section>
-
-    <div class="grid-list">
-      <button id="grid">⏹️ Grid</button>
-      <button id="list">📄 List</button>
-    </div>
-
-    <section class="game-directory">
-      <h2>Featured Products</h2>
-      <div class="product-grid">
+    <main>
         
-        <div class="product-card">
-          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg" alt="Cyberpunk 2077" />
-          <h3>Cyberpunk 2077</h3>
-          <p>Platform: PC, PS5, Xbox</p>
-          <p>$49.99</p>
+        <div class="search-container">
+            <input type="text" id="product-search" placeholder="Search for games or gear..." aria-label="Search products">
+            <button id="search-button">Search</button>
         </div>
-        <div class="product-card">
-          <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRxFAMCihTSxdPuyGX6xfkqf4OKP2zKPa7Nj7Jb8eJSGUqjZj0Lto5PgmQPmSkQsV78P1pS" alt="God of War Ragnarok" />
-          <h3>God of War Ragnarok</h3>
-          <p>Platform: PS5</p>
-          <p>$59.99</p>
-        </div>
-        <div class="product-card">
-          <img src="https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg" alt="Elden Ring" />
-          <h3>Elden Ring</h3>
-          <p>Platform: PC, PS5, Xbox</p>
-          <p>$59.99</p>
-        </div>
-        <div class="product-card">
-          <img src="https://cdn.akamai.steamstatic.com/steam/apps/1938090/header.jpg" alt="Modern Warfare II" />
-          <h3>Call of Duty: MW II</h3>
-          <p>Platform: PC, PS5, Xbox</p>
-          <p>$69.99</p>
-        </div>
-        <div class="product-card">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdH1XYII-E82gDFE7yqJmzWz8Y_mEMvRU4Tg&s" alt="Need for speed: Unbound" />
-          <h3>Need for speed: Unbound</h3>
-          <p>Platform: Nintendo Switch</p>
-          <p>$59.99</p>
-        </div>
-        <div class="product-card">
-          <img src="https://assets2.razerzone.com/images/pnx.assets/89aed41d5b981473c140317e67dbc617/500x500-enki-pro.webp" alt="Gaming Chair" />
-          <h3>Razer Gaming Chair</h3>
-          <p>Ergonomic comfort for long gaming sessions</p>
-          <p>$299.99</p>
-        </div>
-        <div class="product-card">
-          <img src="https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_SL1500_.jpg" alt="Mechanical Keyboard" />
-          <h3>SteelSeries Mechanical Keyboard</h3>
-          <p>RGB Backlit, Custom Macro Keys</p>
-          <p>$129.99</p>
-        </div>
-        <div class="product-card">
-          <img src="https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_SL1500_.jpg" alt="Gaming Mouse" />
-          <h3>Logitech G502 Hero</h3>
-          <p>High Performance Wired Gaming Mouse</p>
-          <p>$49.99</p>
-        </div>
-        <div class="product-card">
-          <img src="https://hyperx.com/cdn/shop/files/hyperx_cloud_iii_wireless_black_77z45aa_main_1_1080x.jpg?v=1743201406" alt="Gaming Headset" />
-          <h3>HyperX Cloud II</h3>
-          <p>7.1 Surround Sound Gaming Headset</p>
-          <p>$99.99</p>
-        </div>
-      </div>
-    </section>
-  </main>
+        
+        <section class="hero">
+            <h2>Level Up Your Play</h2>
+            <p>Discover the latest and greatest in gaming at Cybex.</p>
+            <a href="directory.html" class="cta-button">Shop Now</a>
+        </section>
 
-  <footer>
-    <div class="footer-content">
-      <div>
-        <p><strong>Cybex Gaming Store</strong><br>123 Game Street, Lagos, Nigeria<br>Email: support@cybexgaming.com<br>Phone: +234 904 676 4045</p>
-      </div>
-      <div class="social">
-        <img src="images/icons8-youtube.svg" alt="YouTube">
-        <img src="images/icons8-twitter.svg" alt="Twitter">
-        <img src="images/icons8-linkedin.svg" alt="LinkedIn">
-      </div>
-      <div>
-        <p>WDD231 Class Project<br>Jeffrey Ohaegbulem<br>&copy; <span id="year"></span> Cybex Gaming Store<br>Last Modified: <span id="lastModified"></span></p>
-      </div>
-    </div>
-  </footer>
+        <div class="view-toggle">
+            <button id="grid-view" aria-label="Grid View">Grid</button>
+            <button id="list-view" aria-label="List View">List</button>
+        </div>
+        
+        <section class="game-directory">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                
+                <div class="product-card">
+                    <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg" alt="Cyberpunk 2077" />
+                    <h3>Cyberpunk 2077</h3>
+                    <p>Platform: PC, PS5, Xbox</p>
+                    <p>$49.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="data:image/jpeg;base64,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" alt="God of War Ragnarok" />
+                    <h3>God of War Ragnarok</h3>
+                    <p>Platform: PS5</p>
+                    <p>$59.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg" alt="Elden Ring" />
+                    <h3>Elden Ring</h3>
+                    <p>Platform: PC, PS5, Xbox</p>
+                    <p>$59.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/1938090/header.jpg" alt="Modern Warfare II" />
+                    <h3>Call of Duty: MW II</h3>
+                    <p>Platform: PC, PS5, Xbox</p>
+                    <p>$69.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdH1XYII-E82gDFE7yqJmzWz8Y_mEMvRU4Tg&s" alt="Need for speed: Unbound" />
+                    <h3>Need for speed: Unbound</h3>
+                    <p>Platform: Nintendo Switch</p>
+                    <p>$59.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyj7haQ5OsfyGUSnslj1gIbyzj9Lb99XbOdA&s" alt="Gaming Chair" />
+                    <h3>Razer Gaming Chair</h3>
+                    <p>Ergonomic comfort for long gaming sessions</p>
+                    <p>$299.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_SL1500_.jpg" alt="Mechanical Keyboard" />
+                    <h3>SteelSeries Mechanical Keyboard</h3>
+                    <p>RGB Backlit, Custom Macro Keys</p>
+                    <p>$129.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="data:image/jpeg;base64,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" alt="Gaming Mouse" />
+                    <h3>Logitech G502 Hero</h3>
+                    <p>High Performance Wired Gaming Mouse</p>
+                    <p>$49.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRMKPfq56FEk_HLX1AoahTziPShl3Eh6oL_Q&s" alt="Gaming Headset" />
+                    <h3>HyperX Cloud II</h3>
+                    <p>7.1 Surround Sound Gaming Headset</p>
+                    <p>$99.99</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <p><strong>Cybex Gaming Store</strong><br>123 Game Street, Lagos, Nigeria<br>Email: support@cybexgaming.com<br>Phone: +234 904 676 4045</p>
+            </div>
+            <div class="social">
+                <img src="images/icons8-youtube.svg" alt="YouTube">
+                <img src="images/icons8-twitter.svg" alt="Twitter">
+                <img src="images/icons8-linkedin.svg" alt="LinkedIn">
+            </div>
+            <div>
+                <p>WDD231 Class Project<br>Jeffrey Ohaegbulem<br>&copy; <span id="year"></span> Cybex Gaming Store<br>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

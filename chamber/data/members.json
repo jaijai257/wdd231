@@ -1,0 +1,76 @@
+{
+  "members": [
+    {
+      "name": "Pixel Realm Studios",
+      "image": "pixel-realm.webp",
+      "description": "Creators of immersive indie games and captivating story-driven adventures.",
+      "address": "456 Indie Lane, Lagos",
+      "phone": "08012345678",
+      "url": "https://www.pixelrealm.com",
+      "membershipLevel": "Gold"
+    },
+    {
+      "name": "GameTech Peripherals",
+      "image": "gametech.webp",
+      "description": "Leading innovator in high-performance gaming keyboards, mice, and headsets.",
+      "address": "789 Gear Ave, Abuja",
+      "phone": "08023456789",
+      "url": "https://www.gametech.com",
+      "membershipLevel": "Gold"
+    },
+    {
+      "name": "Apex Gaming Academy",
+      "image": "apex-academy.webp",
+      "description": "Professional training and coaching for aspiring e-sports athletes.",
+      "address": "101 Victory Road, Port Harcourt",
+      "phone": "08034567890",
+      "url": "https://www.apexgamingacademy.com",
+      "membershipLevel": "Silver"
+    },
+    {
+      "name": "VR Immersion Labs",
+      "image": "vr-immersion.webp",
+      "description": "Developing cutting-edge virtual reality experiences and hardware.",
+      "address": "222 Virtual Blvd, Enugu",
+      "phone": "08045678901",
+      "url": "https://www.vrimmersionlabs.com",
+      "membershipLevel": "Silver"
+    },
+    {
+      "name": "Retro Arcade Resurrected",
+      "image": "retro-arcade.webp",
+      "description": "Bringing classic arcade games back to life with modern twists.",
+      "address": "333 Nostalgia Way, Ibadan",
+      "phone": "08056789012",
+      "url": "https://www.retroarcades.com",
+      "membershipLevel": "Bronze"
+    },
+    {
+      "name": "Mod Squad Customs",
+      "image": "modsquad.webp",
+      "description": "Custom PC builds and console modifications for ultimate performance.",
+      "address": "444 Overclock Dr, Kano",
+      "phone": "08067890123",
+      "url": "https://www.modsquadcustoms.com",
+      "membershipLevel": "Bronze"
+    },
+    {
+      "name": "Indie Game Collective",
+      "image": "indie-collective.webp",
+      "description": "A community-driven platform supporting emerging independent game developers.",
+      "address": "555 Creator St, Kaduna",
+      "phone": "08078901234",
+      "url": "https://www.indiegamecollective.org",
+      "membershipLevel": "NP"
+    },
+    {
+      "name": "E-Sports Fanatics Forum",
+      "image": "esports-fanatics.webp",
+      "description": "The go-to forum for e-sports news, discussions, and event coverage.",
+      "address": "666 Arena Rd, Benin City",
+      "phone": "08089012345",
+      "url": "https://www.esportsfanatics.net",
+      "membershipLevel": "NP"
+    }
+  ]
+}

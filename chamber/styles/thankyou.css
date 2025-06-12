@@ -1,0 +1,84 @@
+:root {
+    --primary-color: #1e1e2e;
+    --accent-color: #ff0055;
+    --text-color: #ffffff;
+    --bg-color: #12121a;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  header, footer {
+    background: var(--primary-color);
+    padding: 1rem;
+    color: var(--text-color);
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 0;
+    margin: 0.5rem 0;
+  }
+  
+  .nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  
+  .thank-you-page {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .thank-you-container {
+    background: var(--primary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  .user-info {
+    margin-top: 1rem;
+    text-align: left;
+  }
+  
+  .user-info p {
+    margin: 0.5rem 0;
+  }
+  
+  .return-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--accent-color);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .return-btn:hover {
+    background: #e6004c;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .social img {
+    width: 24px;
+    margin: 0 0.5rem;
+  }
+  
