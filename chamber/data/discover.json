@@ -1,0 +1,60 @@
+{
+    "items": [
+      {
+        "id": "item1",
+        "name": "The Gaming Lounge",
+        "image": "gaming-lounge.webp",
+        "address": "15 Game Street, Ikoyi, Lagos",
+        "description": "A vibrant spot for casual and competitive gamers, with high-end PCs and console setups."
+      },
+      {
+        "id": "item2",
+        "name": "VR Experience Zone",
+        "image": "vr-zone.webp",
+        "address": "22 Immersion Way, Lekki, Lagos",
+        "description": "Dive into virtual worlds with state-of-the-art VR headsets and interactive games."
+      },
+      {
+        "id": "item3",
+        "name": "Retro Arcadian",
+        "image": "retro-arcade.webp",
+        "address": "5 Arcade Avenue, Yaba, Lagos",
+        "description": "Nostalgic arcade games, pinball machines, and classic console corner."
+      },
+      {
+        "id": "item4",
+        "name": "Tech Gadgets Emporium",
+        "image": "tech-emporium.webp",
+        "address": "7 Tech Boulevard, Ikeja, Lagos",
+        "description": "Your one-stop shop for the latest gaming peripherals, hardware, and tech accessories."
+      },
+      {
+        "id": "item5",
+        "name": "Esports Arena Lagos",
+        "image": "esports-arena.webp",
+        "address": "30 Champion Road, Victoria Island, Lagos",
+        "description": "Home to professional esports tournaments and events, with spectator seating."
+      },
+      {
+        "id": "item6",
+        "name": "Board Game Haven",
+        "image": "board-game-haven.webp",
+        "address": "10 Play Street, Surulere, Lagos",
+        "description": "A cozy cafe offering a wide selection of board games for all ages."
+      },
+      {
+        "id": "item7",
+        "name": "Game Dev Hub",
+        "image": "game-dev-hub.webp",
+        "address": "40 Creator's Lane, Festac Town, Lagos",
+        "description": "A collaborative space for aspiring game developers, workshops, and networking events."
+      },
+      {
+        "id": "item8",
+        "name": "Cybex Training Center",
+        "image": "training-center.webp",
+        "address": "123 Game Street, Lagos, Nigeria",
+        "description": "Official training grounds for competitive gamers, offering coaching and practice facilities."
+      }
+    ]
+}
